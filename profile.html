@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+        <!-- Jquery cdn -->
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" 
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="profile.css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <section class="section1">
+
+        <div class="div1">
+            <img src="images/tweetbird.png" class="bird">
+            <ul>
+                <li>Home</li>
+                <li>Explore</li>
+                <li>Notifications</li>
+                <li>Messages</li>
+                <li>Bookmarks</li>
+                <li>Lists</li>
+                <li>Profile</li>
+                <li>More</li>
+
+            </ul>
+            <input type="text" id="tweet" placeholder="What's happening"><br><br>
+
+            <button class="tweet1 btn btn-primary rounded-5" id="sendtweet"> Tweet</button><br><br>
+
+            <div class="userDet">
+                <div>
+                    <img src="" class="profilepic">
+                </div>
+
+                <div >
+                    <h6 id="username1"> Username</h6>
+                    <p>Username</p>
+                </div>
+            </div>
+            <button id="signout" class="btn btn-secondary">Log out</button>
+
+
+        </div>
+        <div class="vl1"></div>
+
+        <div class="div2">
+            <h1 id="profilename"> </h1>
+
+            <div class="profilebackground">
+                <img src="images/backgroundimg.avif" class="backimg">
+            </div>
+            <div class="profileimg">
+                <img src="" id="profile">
+            </div>
+
+            <button class="edit btn btn-secondary border-5" id="edit">Edit Profile</button>
+
+            <h1 id="username"> </h1>
+            <h2 id="useremail"> </h2>
+            <h2 id="about"> </h2>
+
+            <br><br>
+
+            <div id="alltweets">
+              <div>
+                <h1>  </h1>
+                <h2>  </h2>
+              </div>
+            </div>
+            
+        </div>
+
+
+        <div class="vl2"></div>
+
+        <div class="div3">
+            <input type="text" placeholder="Search Twitter" class="rounded-5">
+
+            <div class="container1">
+
+            </div>
+            
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+
+
+        <script src="config.js"></script>
+        <script src="profile.js"></script>
+    </section>
+</body>
+
+</html>
