@@ -29,7 +29,7 @@ document.getElementById("login").onclick = function(){
 
   firebase.auth().signInWithEmailAndPassword(email1 ,password1).then((givenCred) =>{
 
-      window.location.href= "homepage.html";
+      window.location.href= "profile.html";
   }).catch((error) =>{
 
     document.getElementById("spinner").style.display = "none";

@@ -13,10 +13,10 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
 
-        <!-- Jquery cdn -->
+    <!-- Jquery cdn -->
 
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" 
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="profile.css">
     <title>Profile</title>
@@ -43,11 +43,11 @@
             <button class="tweet1 btn btn-primary rounded-5" id="sendtweet"> Tweet</button><br><br>
 
             <div class="userDet">
-                <div>
-                    <img src="" class="profilepic">
+                <div class="profilepic">
+                    <img id="profilepic" class="profilepic">
                 </div>
 
-                <div >
+                <div>
                     <h6 id="username1"> Username</h6>
                     <p>Username</p>
                 </div>
@@ -62,13 +62,58 @@
             <h1 id="profilename"> </h1>
 
             <div class="profilebackground">
-                <img src="images/backgroundimg.avif" class="backimg">
+                <img id="backgroundpic" class="backimg">
             </div>
-            <div class="profileimg">
-                <img src="" id="profile">
+            <div id="profileimg" class="profileimg">
+                <img id="profilepic2" class="profilepic2">
             </div>
 
-            <button class="edit btn btn-secondary border-5" id="edit">Edit Profile</button>
+
+            <!-- Button trigger modal -->
+            <button type="button" class=" edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Edit Profile
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                            <h5 class="modal-title" id="exampleModalLabel">Edit account</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <input type="file" name="" id="editbackground"> <button class=" btn btn-warning"
+                                    id="uploadbgImage">Upload background image</button>
+                            </div>
+                            <div>
+                                <input type="file" name="" id="editphoto"> <button class=" btn btn-warning"
+                                    id="uploadImage">Upload profile image</button>
+                            </div>
+
+
+                            <br><br>
+
+                            <p id="vProgress"></p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%"
+                                    aria-valuenow="0" aria-valuemin="0" id ="progressbar" aria-valuemax="100"></div>
+                            </div>
+                            <br><br>
+
+                            <input type="text" class="form-control" id="editUserName">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="editAccount">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <h1 id="username"> </h1>
             <h2 id="useremail"> </h2>
@@ -77,12 +122,12 @@
             <br><br>
 
             <div id="alltweets">
-              <div>
-                <h1>  </h1>
-                <h2>  </h2>
-              </div>
+                <div>
+                    <h1> </h1>
+                    <h2> </h2>
+                </div>
             </div>
-            
+
         </div>
 
 
@@ -94,13 +139,14 @@
             <div class="container1">
 
             </div>
-            
+
         </div>
 
         <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>
 
 
         <script src="config.js"></script>

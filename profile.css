@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 200vh;
+    height: 100vh;
 }
 
 .div1 {
@@ -42,14 +42,21 @@
     margin-top:5vh;
 }
 
+.profilepic{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+}
+
 .vl1{
     border-left: 1px solid grey;
-    height: 200vh;
+    height: 100vh;
 }
 
 .div2 {
     width: 45%;
-    height: 200vh;
+    height: 100vh;
+    overflow-y : auto;
     position: relative;
 }
 
@@ -58,18 +65,20 @@
     height: 30vh;
 }
 
+.profilepic2{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+}
+
 .backimg{
     width:100%;
     height:30vh;
 }
 
 .profileimg {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    background-color: grey;
     position: absolute;
-    top:18vh;
+    top:22vh;
     left:4%;
 }
 
@@ -116,9 +125,11 @@
     justify-content: space-between;
 }
 
+
+
 .vl2{
     border-left: 1px solid grey;
-    height: 200vh;
+    height: 100vh;
 }
 
 .div3 {
