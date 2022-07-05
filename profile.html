@@ -71,7 +71,7 @@
 
             <!-- Button trigger modal -->
             <button type="button" class=" edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Edit Profile
+                Edit Profile
             </button>
 
             <!-- Modal -->
@@ -79,16 +79,16 @@
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header"> 
+                        <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Edit account</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div>
+                            <div class="d-flex flex-row">
                                 <input type="file" name="" id="editbackground"> <button class=" btn btn-warning"
                                     id="uploadbgImage">Upload background image</button>
                             </div>
-                            <div>
+                            <div class="d-flex flex-row">
                                 <input type="file" name="" id="editphoto"> <button class=" btn btn-warning"
                                     id="uploadImage">Upload profile image</button>
                             </div>
@@ -99,7 +99,7 @@
                             <p id="vProgress"></p>
                             <div class="progress">
                                 <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%"
-                                    aria-valuenow="0" aria-valuemin="0" id ="progressbar" aria-valuemax="100"></div>
+                                    aria-valuenow="10" aria-valuemin="0" id="progressbar" aria-valuemax="100"></div>
                             </div>
                             <br><br>
 
@@ -117,16 +117,62 @@
 
             <h1 id="username"> </h1>
             <h2 id="useremail"> </h2>
-            <h2 id="about"> </h2>
 
-            <br><br>
+            <br>
 
             <div id="alltweets">
-                <div>
-                    <h1> </h1>
-                    <h2> </h2>
+
+           <h1 id="likes"> </h1>
+            </div>
+        </div>
+
+        
+        <!-- Modal -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" id="deletebtn" class="btn btn-primary">Delete</button>
+                    </div>
                 </div>
             </div>
+        </div>
+
+
+          <!-- Modal -->
+          <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Comments</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <p id="allcomments"></p>   
+                    </div>
+                    <div class="modal-footer">
+                        <div class="d-flex flex-row">
+                            <input type="text" name="" id="editcomment"> <button class=" btn btn-"
+                                id="uploadcomment">Comment</button>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        </div>
+        </div>
+
 
         </div>
 
@@ -142,6 +188,7 @@
 
         </div>
 
+
         <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
@@ -151,6 +198,7 @@
 
         <script src="config.js"></script>
         <script src="profile.js"></script>
+
     </section>
 </body>
 
