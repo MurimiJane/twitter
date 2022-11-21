@@ -241,34 +241,34 @@ firebase.auth().onAuthStateChanged((user) => {
 
                             }
 
-                        
 
 
-                                    firebase.firestore().collection("comments").where("tweetid", "==", comments).get().then((commentSnapshot) => {
-                                        let content = '';
-                                        commentSnapshot.forEach((tweet) => {
-                                            //let docData = comments.data()
-                                            //console.log(docData)
-                                            let theComment = tweet.data().comment;
-                                            //let commentId = doc.data().commentid;
-                                            //let timestamp = doc.data().timeStamp;
-                                            //let theDay = timestamp.toDate().toDateString();
-                                            //let docID = doc.data().docID;
 
-                                            
-                                                //use jquery to display comments from database to html page
-                                                content += '<div class="commentcontainer">';
-                                                content += '<p>' + theComment + '<p>';
-                                                content += '<hr>';
-                                                content += '</div>';
+                            firebase.firestore().collection("comments").where("tweetid", "==", comments).get().then((commentSnapshot) => {
+                                let content = '';
+                                commentSnapshot.forEach((tweet) => {
+                                    //let docData = comments.data()
+                                    //console.log(docData)
+                                    let theComment = tweet.data().comment;
+                                    //let commentId = doc.data().commentid;
+                                    //let timestamp = doc.data().timeStamp;
+                                    //let theDay = timestamp.toDate().toDateString();
+                                    //let docID = doc.data().docID;
 
-                                                //console.log(doc.id, " => ", doc.data());
-                                        })
-                                        $("#allcomments").append(content);
-                                        
-                                    })
-                            
-                        
+
+                                    //use jquery to display comments from database to html page
+                                    content += '<div class="commentcontainer">';
+                                    content += '<p>' + theComment + '<p>';
+                                    content += '<hr>';
+                                    content += '</div>';
+
+                                    //console.log(doc.id, " => ", doc.data());
+                                })
+                                $("#allcomments").append(content);
+
+                            })
+
+
 
                             /*
                             firebase.firestore().collection("tweets").get().then((tweetsList) => {
@@ -334,14 +334,10 @@ firebase.auth().onAuthStateChanged((user) => {
             document.getElementById("deletebtn").onclick = function () {
                 firebase.firestore().collection("tweets").doc(value).delete().then(() => {
                     console.log("Document successfully deleted!");
-                    window.href.reload();
+                    // window.location.reload();
                 })
             }
         }
-
-
-
-
     } else {
 
         //if auth state has not changed, take back to sign in page
@@ -349,17 +345,12 @@ firebase.auth().onAuthStateChanged((user) => {
     }
 })
 
-
-
-
 /*
 //delete tweet function
 function deleteTweet(value){
     console.log(value)
 }
 */
-
-
 /*firebase.auth().onAuthStateChanged((user) => {
 
     if (user) {

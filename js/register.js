@@ -5,11 +5,24 @@ document.getElementById("register").onclick = function () {
 
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
-
+      let name = document.getElementById("username").value;
 
     firebase.auth().createUserWithEmailAndPassword(email, password).then((userCred) => {
 
-        window.location.href = "homepage.html";
+        let userId = userCred.user.uid;
+        let timeStamp = new Date();
+
+            firebase.firestore().collection("users").doc(userId).set({
+                username: name,
+                email:email,
+                timeStamp: timeStamp,
+                userid: userId
+            }).then(()=>{
+                window.location.href = "profile.html";
+            })
+
+       
+
 
 
     }).catch((error) => {
@@ -24,6 +37,13 @@ document.getElementById("register").onclick = function () {
 
 
     })
+
+
 }
+
+
+
+
+
 
 
